@@ -5,11 +5,20 @@
 // Angle brackets (<>) references the C++ Standard Library.
 #include <iostream>
 
+// Accesses code defined in a header file.
+#include "Calculator.h"
+
 // Informs complier that the C++ Standard Library will be used.
 // Without this line, every line would have to be preceded with std::
 using namespace std;
 
-int main() {
+int main() 
+{
+	// Initalises variables to prevent null reference errors
+	double x = 0.0; 
+	double y = 0.0;
+	double result = 0.0;
+	char oper = '+';
 
 	// cout is used to print a line of text
 	// endl breaks up the current line and moves the cursor to a new line
