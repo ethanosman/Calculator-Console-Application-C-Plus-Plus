@@ -14,16 +14,34 @@ using namespace std;
 
 int main() 
 {
-	// Initalises variables to prevent null reference errors
+	// Initalises variables to prevent null reference errors.
 	double x = 0.0; 
 	double y = 0.0;
 	double result = 0.0;
 	char oper = '+';
 
-	// cout is used to print a line of text
-	// endl breaks up the current line and moves the cursor to a new line
+	// cout is used to print a line of text.
+	// endl breaks up the current line and moves the cursor to a new line.
 	cout << "Calculator Console Application" << endl << endl;
 	cout << "Enter the operation to perform: a+b | a-b | a*b | a/b" << endl;
+
+	// An instance of the class is declared to perform the maths.
+	Calculator c; 
+
+	// Loop that allows users to perform as much calculations as they like. 
+	while (true)
+	{
+		// cin accepts user input. 
+		// This stream places the values entered into the relevant variables.
+		cin >> x >> oper >> y;
+
+		// Calls the function defined earlier and supplies the entered input.
+		// The result is then stored in a variable. 
+		result = c.Calculate(x, oper, y);
+
+		// The result of the calculation are then printed onto the console. 
+		cout << "Result: " << result << endl;
+	}
 
 	// Waits for Enter to be pressed before terminating the program
 	cin.get();
